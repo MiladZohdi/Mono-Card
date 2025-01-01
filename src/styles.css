@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #b5b6b9;
+}
+
+.container {
+  border-radius: 0.8rem;
+  margin: 5rem auto;
+  height: 52rem;
+  width: 88rem;
+  background-color: #020407;
+  color: #fff;
+  padding: 6.8rem 8.4rem;
+
+  display: grid;
+
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.input-container h1 {
+  text-transform: uppercase;
+  grid-column: 1/3;
+}
+
+.input {
+  grid-column: 1/-1;
+}
+
+.input:nth-child(4) {
+  grid-column: 1/1;
+  grid-row: 4/4;
+}
+
+.input:nth-child(5) {
+  grid-column: 2/2;
+  grid-row: 4/4;
+}
+
+.input:nth-child(4) .input-wrapper input {
+  max-width: 1rem;
+}
+
+.input:nth-child(5) .input-wrapper input {
+  max-width: 1rem;
+}
+.input label {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  display: block;
+  text-transform: uppercase;
+}
+
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.input-wrapper {
+  position: relative;
+  min-width: 100%;
+}
+
+.input-wrapper input {
+  min-width: 100%;
+  padding: 1rem;
+  padding-left: 4rem;
+  border-radius: 0.5rem;
+
+  text-transform: uppercase;
+}
+
+.input-wrapper input::placeholder {
+  color: #999;
+}
+
+.input-wrapper .icon {
+  width: 2rem;
+  height: 2rem;
+
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 2rem;
+  z-index: 9999;
+}
+
+.input-container button {
+  border-radius: 0.5rem;
+  border: 0px solid;
+  max-width: 100%;
+  height: 4rem;
+  grid-column: 1/-1;
+  background-color: #21242e;
+  color: #edeef0;
+  font-size: 1.6rem;
+
+  transition: all 0.3s;
+}
+.input-container button:hover {
+  cursor: pointer;
+  background-color: #242b35;
+}
